@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1: Welcome & Introduction - Flint Directors Portal</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/flint-logo.png" alt="Flint" height="40" class="d-inline-block align-text-top">
+                <span class="brand-text">Directors Portal</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="onboardingDropdown" role="button" data-bs-toggle="dropdown">
+                            Onboarding Steps
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="step1.html">Step 1: Welcome & Introduction</a></li>
+                            <li><a class="dropdown-item" href="step2.html">Step 2: Legal & Compliance</a></li>
+                            <li><a class="dropdown-item" href="step3.html">Step 3: Accounting & Financial</a></li>
+                            <li><a class="dropdown-item" href="step4.html">Step 4: Operational Training</a></li>
+                            <li><a class="dropdown-item" href="step5.html">Step 5: Branding & Marketing</a></li>
+                            <li><a class="dropdown-item" href="step6.html">Step 6: Partnership & Growth</a></li>
+                            <li><a class="dropdown-item" href="step7.html">Step 7: Continuous Support</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#support">Support</a>
+                    </li>
+                </ul>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="form-check form-switch ms-3">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Tracker -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="container">
+            <div class="progress-wrapper">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="progress-text">14% Complete - Step 1 of 7</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step Navigation -->
+    <section class="step-navigation py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <a href="index.html" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Overview
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="step-indicator">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Welcome & Introduction</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="step2.html" class="btn btn-primary" id="nextStepBtn">
+                        Next Step <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="step-hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="step-hero-content">
+                        <h1 class="step-hero-title">Welcome to Your Flint Journey</h1>
+                        <p class="step-hero-subtitle">Let's start with the fundamentals - understanding our mission, values, and how Flint empowers Directors to succeed.</p>
+                        
+                        <div class="welcome-video-container">
+                            <button class="play-button" data-bs-toggle="modal" data-bs-target="#welcomeVideoModal">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="video-info">
+                                <h4>Welcome Message from CEO</h4>
+                                <p>A personal welcome and overview of what to expect (5 min)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="step-hero-image">
+                        <img src="assets/images/welcome-illustration.svg" alt="Welcome to Flint" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Mission & Vision</h2>
+                <p class="section-subtitle">Understanding the foundation of what drives Flint Group</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To empower mortgage brokers with the tools, training, and support they need to build successful, independent businesses while providing exceptional service to their clients.</p>
+                        
+                        <div class="mission-points">
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Broker independence and ownership</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Comprehensive support ecosystem</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Client-focused service excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="vision-card">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be Australia's leading mortgage broking network, recognized for innovation, integrity, and the success of our Directors in building thriving businesses.</p>
+                        
+                        <div class="vision-points">
+                            <div class="point">
+                                <i class="fas fa-star"></i>
+                                <span>Industry leadership in innovation</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-star"></i>
+                                <span>Uncompromising integrity</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-star"></i>
+                                <span>Director success stories</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flint Values Section -->
+    <section class="flint-values py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Flint Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Integrity</h4>
+                        <p>We operate with transparency, honesty, and ethical standards in all our interactions.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>We embrace technology and creative solutions to stay ahead of industry changes.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community</h4>
+                        <p>We foster a supportive network where Directors help each other succeed.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Excellence</h4>
+                        <p>We strive for the highest standards in service delivery and business outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FlintEngine vs FlintMedia Section -->
+    <section class="flint-platforms py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Understanding Our Platforms</h2>
+                <p class="section-subtitle">Two powerful platforms working together for your success</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="platform-card flint-engine">
+                        <div class="platform-header">
+                            <div class="platform-logo">
+                                <img src="assets/images/flintengine-logo.png" alt="FlintEngine" class="img-fluid">
+                            </div>
+                            <h3>FlintEngine</h3>
+                            <p class="platform-tagline">Your Business Operations Hub</p>
+                        </div>
+
+                        <div class="platform-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li><i class="fas fa-cog me-2"></i>CRM and client management</li>
+                                <li><i class="fas fa-file-alt me-2"></i>Application processing tools</li>
+                                <li><i class="fas fa-chart-bar me-2"></i>Business analytics and reporting</li>
+                                <li><i class="fas fa-calculator me-2"></i>Commission tracking</li>
+                                <li><i class="fas fa-shield-alt me-2"></i>Compliance management</li>
+                            </ul>
+                        </div>
+
+                        <div class="platform-purpose">
+                            <h5>Purpose:</h5>
+                            <p>FlintEngine is your operational backbone - everything you need to run your broking business efficiently and effectively.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="platform-card flint-media">
+                        <div class="platform-header">
+                            <div class="platform-logo">
+                                <img src="assets/images/flintmedia-logo.png" alt="FlintMedia" class="img-fluid">
+                            </div>
+                            <h3>FlintMedia</h3>
+                            <p class="platform-tagline">Your Marketing Power Engine</p>
+                        </div>
+
+                        <div class="platform-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li><i class="fas fa-bullhorn me-2"></i>Digital marketing campaigns</li>
+                                <li><i class="fas fa-robot me-2"></i>AI-powered content creation</li>
+                                <li><i class="fas fa-share-alt me-2"></i>Social media management</li>
+                                <li><i class="fas fa-envelope me-2"></i>Email marketing automation</li>
+                                <li><i class="fas fa-chart-line me-2"></i>Lead generation tools</li>
+                            </ul>
+                        </div>
+
+                        <div class="platform-purpose">
+                            <h5>Purpose:</h5>
+                            <p>FlintMedia helps you build your brand, generate leads, and market your services with professional, AI-enhanced content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platform-integration">
+                <div class="integration-card">
+                    <h3><i class="fas fa-sync-alt me-2"></i>Seamless Integration</h3>
+                    <p>FlintEngine and FlintMedia work together seamlessly. Leads generated through FlintMedia automatically flow into FlintEngine, where you can manage the entire client journey from initial contact to settlement.</p>
+                    
+                    <div class="integration-flow">
+                        <div class="flow-step">
+                            <div class="step-icon">📢</div>
+                            <span>Marketing Campaign</span>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="flow-step">
+                            <div class="step-icon">👥</div>
+                            <span>Lead Generation</span>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="flow-step">
+                            <div class="step-icon">⚙️</div>
+                            <span>CRM Management</span>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="flow-step">
+                            <div class="step-icon">🏆</div>
+                            <span>Settlement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directors Model Section -->
+    <section class="directors-model py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">The Flint Directors Model</h2>
+                <p class="section-subtitle">Understanding how our unique business model works</p>
+            </div>
+
+            <div class="model-infographic">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="infographic-content">
+                            <h3>How It Works</h3>
+                            
+                            <div class="model-steps">
+                                <div class="model-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>You Own Your Business</h4>
+                                        <p>Unlike traditional employment, you're a business owner with your own ABN, building equity and assets.</p>
+                                    </div>
+                                </div>
+
+                                <div class="model-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>We Provide the Infrastructure</h4>
+                                        <p>Access to lenders, technology platforms, compliance systems, and ongoing support.</p>
+                                    </div>
+                                </div>
+
+                                <div class="model-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Shared Success Model</h4>
+                                        <p>We succeed when you succeed. Our revenue comes from a portion of commissions, aligning our interests.</p>
+                                    </div>
+                                </div>
+
+                                <div class="model-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Ongoing Support & Growth</h4>
+                                        <p>Continuous training, marketing support, and business development assistance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="model-benefits">
+                            <h4>Key Benefits</h4>
+                            <div class="benefit-item">
+                                <i class="fas fa-crown"></i>
+                                <span>Business Ownership</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Full Infrastructure</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-users"></i>
+                                <span>Community Support</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Scalable Growth</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Ongoing Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Downloads Section -->
+    <section class="checklist-downloads py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Step 1 Resources</h2>
+                <p class="section-subtitle">Essential documents and checklists to get you started</p>
+            </div>
+
+            <div class="downloads-carousel">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-list-check"></i>
+                            </div>
+                            <h4>Onboarding Checklist</h4>
+                            <p>Complete guide to all 7 steps with timelines and requirements.</p>
+                            <div class="download-meta">
+                                <span class="file-type">PDF</span>
+                                <span class="file-size">2.3 MB</span>
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="downloadFile('onboarding-checklist.pdf')">
+                                <i class="fas fa-download me-2"></i>Download
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Flint Values Guide</h4>
+                            <p>Detailed explanation of our core values and how they apply to daily operations.</p>
+                            <div class="download-meta">
+                                <span class="file-type">PDF</span>
+                                <span class="file-size">1.8 MB</span>
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="downloadFile('flint-values-guide.pdf')">
+                                <i class="fas fa-download me-2"></i>Download
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="download-card">
+                            <div class="download-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>Platform Quick Start</h4>
+                            <p>Quick reference guide for FlintEngine and FlintMedia basics.</p>
+                            <div class="download-meta">
+                                <span class="file-type">PDF</span>
+                                <span class="file-size">3.1 MB</span>
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="downloadFile('platform-quickstart.pdf')">
+                                <i class="fas fa-download me-2"></i>Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step Completion Section -->
+    <section class="step-completion py-5">
+        <div class="container">
+            <div class="completion-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3>Ready to Continue?</h3>
+                        <p>You've learned about Flint's mission, values, and platforms. The next step is setting up your legal and compliance structure.</p>
+                        
+                        <div class="completion-checklist">
+                            <div class="check-item" data-requirement="video">
+                                <input type="checkbox" id="watchedVideo" class="form-check-input">
+                                <label for="watchedVideo">Watched welcome video</label>
+                            </div>
+                            <div class="check-item" data-requirement="values">
+                                <input type="checkbox" id="readValues" class="form-check-input">
+                                <label for="readValues">Reviewed Flint values and mission</label>
+                            </div>
+                            <div class="check-item" data-requirement="platforms">
+                                <input type="checkbox" id="understoodPlatforms" class="form-check-input">
+                                <label for="understoodPlatforms">Understood FlintEngine vs FlintMedia</label>
+                            </div>
+                            <div class="check-item" data-requirement="downloads">
+                                <input type="checkbox" id="downloadedResources" class="form-check-input">
+                                <label for="downloadedResources">Downloaded essential resources</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 text-center">
+                        <div class="completion-actions">
+                            <button class="btn btn-success btn-lg w-100 mb-3" id="completeStepBtn" disabled>
+                                <i class="fas fa-check me-2"></i>Complete Step 1
+                            </button>
+                            <p class="small text-muted">Complete all requirements above to continue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>Need Help with Step 1?</h5>
+                    <p>Our onboarding team is here to support you through every step.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <button class="btn btn-outline-light me-2" onclick="FlintPortal.openChat()">
+                        <i class="fas fa-comments me-2"></i>Live Chat
+                    </button>
+                    <a href="tel:1300-123-456" class="btn btn-outline-light">
+                        <i class="fas fa-phone me-2"></i>Call Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Welcome Video Modal -->
+    <div class="modal fade" id="welcomeVideoModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome to Flint Directors</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Welcome Video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs Floating Button -->
+    <div class="floating-faq">
+        <button class="btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#faqModal">
+            <i class="fas fa-question"></i>
+        </button>
+    </div>
+
+    <!-- Step-specific FAQ Modal -->
+    <div class="modal fade" id="faqModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Step 1 FAQs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="step1FAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What's the difference between being an employee and a Flint Director?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#step1FAQ">
+                                <div class="accordion-body">
+                                    As a Flint Director, you own your business with your own ABN. You're not an employee but an independent business owner who has access to Flint's infrastructure, support, and platforms. This means you build equity, have more control over your operations, and benefit directly from your business growth.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do I need to use both FlintEngine and FlintMedia?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#step1FAQ">
+                                <div class="accordion-body">
+                                    While FlintEngine is essential for managing your business operations, FlintMedia is optional but highly recommended. Many successful Directors use both platforms together to maximize their lead generation and operational efficiency.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How long does it take to complete Step 1?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#step1FAQ">
+                                <div class="accordion-body">
+                                    Step 1 typically takes 2-3 hours to complete thoroughly. This includes watching the welcome video, reading through all materials, downloading resources, and ensuring you understand the Flint model before moving to legal setup.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/step1.js"></script>
+</body>
+</html>

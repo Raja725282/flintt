@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4: Branding & Marketing - Flint Directors Onboarding</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="https://via.placeholder.com/150x50/4D0032/FFFFFF?text=FLINT" alt="Flint" height="40">
+            </a>
+            
+            <div class="navbar-nav ms-auto">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                        <div class="user-avatar me-2">U</div>
+                        <span class="user-name">User</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Step Header -->
+    <div class="step-header bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="step-number me-3">4</span>
+                        <div>
+                            <h1 class="h3 mb-1">Branding & Marketing Setup</h1>
+                            <p class="mb-0 opacity-75">Build your professional brand and access marketing resources</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="step-completion-badge">
+                        <i class="fas fa-paint-brush me-2"></i>
+                        <span class="completion-text">
+                            <span class="fw-bold text-primary">In Progress</span><br>
+                            <small class="step-completion-percentage">0%</small> complete
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="Step progress">
+            <ol class="breadcrumb step-breadcrumb">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="step1.html">Welcome</a></li>
+                <li class="breadcrumb-item"><a href="step2.html">Tools & Tech</a></li>
+                <li class="breadcrumb-item"><a href="step3.html">Financial Setup</a></li>
+                <li class="breadcrumb-item active">Branding & Marketing</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Brand Profile Section -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-user-tie text-primary fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Professional Brand Profile</h2>
+                <p class="text-muted">Create your professional identity and public-facing profile</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Brand Profile Form -->
+                    <div class="brand-profile-card card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-id-card me-2"></i>Your Professional Profile</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="brandProfileForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Professional Headshot *</label>
+                                        <div class="headshot-upload-container">
+                                            <div class="headshot-preview" id="headshotPreview">
+                                                <i class="fas fa-user fa-3x text-muted"></i>
+                                                <p class="mt-2 text-muted">Upload your photo</p>
+                                            </div>
+                                            <div class="headshot-upload-overlay" onclick="triggerHeadshotUpload()">
+                                                <i class="fas fa-camera"></i>
+                                                <span>Change Photo</span>
+                                            </div>
+                                            <input type="file" id="headshotFile" accept="image/*" style="display: none;">
+                                        </div>
+                                        <small class="form-text text-muted">Professional headshot recommended. JPG, PNG up to 5MB.</small>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Display Name *</label>
+                                            <input type="text" class="form-control" id="displayName" placeholder="John Smith" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Professional Title *</label>
+                                            <input type="text" class="form-control" id="professionalTitle" placeholder="Senior Mortgage Broker" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Years of Experience</label>
+                                            <select class="form-select" id="yearsExperience">
+                                                <option value="">Select experience</option>
+                                                <option value="0-2">0-2 years</option>
+                                                <option value="3-5">3-5 years</option>
+                                                <option value="6-10">6-10 years</option>
+                                                <option value="11-15">11-15 years</option>
+                                                <option value="16+">16+ years</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="form-label">Professional Bio *</label>
+                                        <textarea class="form-control" id="professionalBio" rows="4" 
+                                                  placeholder="Tell clients about your expertise, approach, and what makes you unique as a mortgage professional..."
+                                                  maxlength="500" required></textarea>
+                                        <div class="form-text">
+                                            <span id="bioCharCount">0</span>/500 characters
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Specializations</label>
+                                        <div class="specialization-checkboxes">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="firstTimeBuyers" value="first-time-buyers">
+                                                <label class="form-check-label" for="firstTimeBuyers">First-Time Buyers</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="refinancing" value="refinancing">
+                                                <label class="form-check-label" for="refinancing">Refinancing</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="luxuryHomes" value="luxury-homes">
+                                                <label class="form-check-label" for="luxuryHomes">Luxury Homes</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="investment" value="investment">
+                                                <label class="form-check-label" for="investment">Investment Properties</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="commercial" value="commercial">
+                                                <label class="form-check-label" for="commercial">Commercial Loans</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Service Areas</label>
+                                        <textarea class="form-control" id="serviceAreas" rows="3" 
+                                                  placeholder="List cities, counties, or regions you serve..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="(555) 123-4567" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="emailAddress" placeholder="john@flintgroup.com" required>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save me-2"></i>Save Profile
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Profile Preview -->
+                    <div class="profile-preview card">
+                        <div class="card-header">
+                            <h6 class="mb-0"><i class="fas fa-eye me-2"></i>Profile Preview</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="preview-profile" id="profilePreview">
+                                <div class="preview-headshot">
+                                    <i class="fas fa-user fa-2x text-muted"></i>
+                                </div>
+                                <h5 class="preview-name">Your Name</h5>
+                                <p class="preview-title text-muted">Professional Title</p>
+                                <p class="preview-bio">Your professional bio will appear here...</p>
+                                <div class="preview-contact">
+                                    <small class="text-muted">Contact information will appear here</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Guidelines -->
+                    <div class="brand-guidelines card mt-3">
+                        <div class="card-header">
+                            <h6 class="mb-0"><i class="fas fa-palette me-2"></i>Brand Guidelines</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="guideline-item">
+                                <h6>Photo Guidelines</h6>
+                                <ul class="guideline-list">
+                                    <li>Professional attire</li>
+                                    <li>Clear, high-resolution</li>
+                                    <li>Neutral background</li>
+                                    <li>Smiling, approachable</li>
+                                </ul>
+                            </div>
+                            <div class="guideline-item">
+                                <h6>Bio Best Practices</h6>
+                                <ul class="guideline-list">
+                                    <li>Highlight experience</li>
+                                    <li>Mention specializations</li>
+                                    <li>Include personal touch</li>
+                                    <li>Keep it concise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marketing Materials Section -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-bullhorn text-success fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Marketing Materials Library</h2>
+                <p class="text-muted">Access professional marketing materials and customize them for your brand</p>
+            </div>
+
+            <!-- Marketing Categories -->
+            <div class="marketing-categories mb-4">
+                <ul class="nav nav-pills justify-content-center" id="marketingTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="business-cards-tab" data-bs-toggle="pill" data-bs-target="#business-cards" type="button" role="tab">
+                            <i class="fas fa-id-card me-2"></i>Business Cards
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="flyers-tab" data-bs-toggle="pill" data-bs-target="#flyers" type="button" role="tab">
+                            <i class="fas fa-file-alt me-2"></i>Flyers & Brochures
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="social-media-tab" data-bs-toggle="pill" data-bs-target="#social-media" type="button" role="tab">
+                            <i class="fas fa-share-alt me-2"></i>Social Media
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="email-templates-tab" data-bs-toggle="pill" data-bs-target="#email-templates" type="button" role="tab">
+                            <i class="fas fa-envelope me-2"></i>Email Templates
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="marketingTabContent">
+                <!-- Business Cards -->
+                <div class="tab-pane fade show active" id="business-cards" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x180/4D0032/FFFFFF?text=Business+Card+Classic" 
+                                         alt="Classic Business Card" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Classic Professional</h6>
+                                    <p class="text-muted small">Traditional layout with Flint branding</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('business-card-classic')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="previewTemplate('business-card-classic')">
+                                            <i class="fas fa-eye me-1"></i>Preview
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x180/FFAF9C/4D0032?text=Business+Card+Modern" 
+                                         alt="Modern Business Card" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Modern Design</h6>
+                                    <p class="text-muted small">Contemporary layout with coral accents</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('business-card-modern')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="previewTemplate('business-card-modern')">
+                                            <i class="fas fa-eye me-1"></i>Preview
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x180/CED7FF/4D0032?text=Business+Card+Premium" 
+                                         alt="Premium Business Card" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Premium Executive</h6>
+                                    <p class="text-muted small">Elegant design for senior brokers</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('business-card-premium')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="previewTemplate('business-card-premium')">
+                                            <i class="fas fa-eye me-1"></i>Preview
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flyers & Brochures -->
+                <div class="tab-pane fade" id="flyers" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x400/4D0032/FFFFFF?text=First+Time+Buyer+Flyer" 
+                                         alt="First Time Buyer Flyer" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>First-Time Buyer Guide</h6>
+                                    <p class="text-muted small">Educational flyer for new buyers</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('first-time-buyer-flyer')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="downloadTemplate('first-time-buyer-flyer')">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x400/FFAF9C/4D0032?text=Refinancing+Benefits" 
+                                         alt="Refinancing Brochure" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Refinancing Benefits</h6>
+                                    <p class="text-muted small">Tri-fold brochure explaining refinancing</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('refinancing-brochure')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="downloadTemplate('refinancing-brochure')">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x400/F0E2A6/4D0032?text=Rate+Sheet+Template" 
+                                         alt="Rate Sheet" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Weekly Rate Sheet</h6>
+                                    <p class="text-muted small">Professional rate comparison template</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('rate-sheet')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="downloadTemplate('rate-sheet')">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="tab-pane fade" id="social-media" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x300/4D0032/FFFFFF?text=Instagram+Post" 
+                                         alt="Instagram Post Template" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Instagram Post Pack</h6>
+                                    <p class="text-muted small">10 templates for social media posts</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('instagram-pack')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="downloadTemplate('instagram-pack')">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x157/FFAF9C/4D0032?text=Facebook+Cover" 
+                                         alt="Facebook Cover" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>Facebook Cover Photo</h6>
+                                    <p class="text-muted small">Professional Facebook cover design</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('facebook-cover')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="downloadTemplate('facebook-cover')">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview">
+                                    <img src="https://via.placeholder.com/300x300/CED7FF/4D0032?text=LinkedIn+Banner" 
+                                         alt="LinkedIn Banner" class="img-fluid">
+                                </div>
+                                <div class="card-body">
+                                    <h6>LinkedIn Banner</h6>
+                                    <p class="text-muted small">Professional LinkedIn header image</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('linkedin-banner')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="downloadTemplate('linkedin-banner')">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Templates -->
+                <div class="tab-pane fade" id="email-templates" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview email-preview">
+                                    <div class="email-mockup">
+                                        <div class="email-header">Welcome Email</div>
+                                        <div class="email-body">New client onboarding email template...</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Client Welcome Email</h6>
+                                    <p class="text-muted small">Professional onboarding email template</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('welcome-email')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="previewTemplate('welcome-email')">
+                                            <i class="fas fa-eye me-1"></i>Preview
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview email-preview">
+                                    <div class="email-mockup">
+                                        <div class="email-header">Follow-up Email</div>
+                                        <div class="email-body">Professional follow-up template...</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Follow-up Email Series</h6>
+                                    <p class="text-muted small">5-part nurture email sequence</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('followup-series')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="previewTemplate('followup-series')">
+                                            <i class="fas fa-eye me-1"></i>Preview
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="marketing-item card">
+                                <div class="marketing-preview email-preview">
+                                    <div class="email-mockup">
+                                        <div class="email-header">Newsletter</div>
+                                        <div class="email-body">Monthly market update template...</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Market Update Newsletter</h6>
+                                    <p class="text-muted small">Monthly market insights template</p>
+                                    <div class="marketing-actions">
+                                        <button class="btn btn-outline-primary btn-sm" onclick="customizeTemplate('newsletter')">
+                                            <i class="fas fa-edit me-1"></i>Customize
+                                        </button>
+                                        <button class="btn btn-outline-success btn-sm" onclick="previewTemplate('newsletter')">
+                                            <i class="fas fa-eye me-1"></i>Preview
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Website & Online Presence -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-info bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-globe text-info fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Website & Online Presence</h2>
+                <p class="text-muted">Establish your professional online presence with our website builder</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Website Builder -->
+                    <div class="website-builder-card card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-laptop me-2"></i>Professional Website Builder</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="website-options">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="website-template" data-template="classic">
+                                            <div class="template-preview">
+                                                <img src="https://via.placeholder.com/250x150/4D0032/FFFFFF?text=Classic+Template" alt="Classic Template" class="img-fluid">
+                                            </div>
+                                            <h6 class="mt-2">Classic Professional</h6>
+                                            <p class="text-muted small">Traditional layout, perfect for established brokers</p>
+                                            <button class="btn btn-outline-primary btn-sm" onclick="selectWebsiteTemplate('classic')">
+                                                Select Template
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="website-template" data-template="modern">
+                                            <div class="template-preview">
+                                                <img src="https://via.placeholder.com/250x150/FFAF9C/4D0032?text=Modern+Template" alt="Modern Template" class="img-fluid">
+                                            </div>
+                                            <h6 class="mt-2">Modern Minimalist</h6>
+                                            <p class="text-muted small">Clean, contemporary design for tech-savvy brokers</p>
+                                            <button class="btn btn-outline-primary btn-sm" onclick="selectWebsiteTemplate('modern')">
+                                                Select Template
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="website-template" data-template="luxury">
+                                            <div class="template-preview">
+                                                <img src="https://via.placeholder.com/250x150/F0E2A6/4D0032?text=Luxury+Template" alt="Luxury Template" class="img-fluid">
+                                            </div>
+                                            <h6 class="mt-2">Luxury Premium</h6>
+                                            <p class="text-muted small">Elegant design for high-end market specialists</p>
+                                            <button class="btn btn-outline-primary btn-sm" onclick="selectWebsiteTemplate('luxury')">
+                                                Select Template
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="website-features mt-4">
+                                <h6>Included Features:</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li><i class="fas fa-check text-success me-2"></i>Mobile-responsive design</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Contact forms & lead capture</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Mortgage calculator integration</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Blog & content management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li><i class="fas fa-check text-success me-2"></i>SEO optimization</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Social media integration</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Client testimonials section</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Free SSL certificate & hosting</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Domain Setup -->
+                    <div class="domain-setup card">
+                        <div class="card-header">
+                            <h6 class="mb-0"><i class="fas fa-link me-2"></i>Domain Setup</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="domain-input-group">
+                                <label class="form-label">Choose Your Domain</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">www.</span>
+                                    <input type="text" class="form-control" id="domainName" placeholder="yourname">
+                                    <span class="input-group-text">.flintmortgage.com</span>
+                                </div>
+                                <button class="btn btn-primary w-100 mt-2" onclick="checkDomainAvailability()">
+                                    Check Availability
+                                </button>
+                            </div>
+
+                            <div class="domain-suggestions mt-3" id="domainSuggestions" style="display: none;">
+                                <h6>Available Options:</h6>
+                                <div class="suggestion-list">
+                                    <!-- Domain suggestions will be populated here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Launch Status -->
+                    <div class="launch-status card mt-3">
+                        <div class="card-header">
+                            <h6 class="mb-0"><i class="fas fa-rocket me-2"></i>Launch Status</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-timeline">
+                                <div class="status-item">
+                                    <div class="status-icon bg-secondary">1</div>
+                                    <span>Choose Template</span>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-icon bg-secondary">2</div>
+                                    <span>Setup Domain</span>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-icon bg-secondary">3</div>
+                                    <span>Customize Content</span>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-icon bg-secondary">4</div>
+                                    <span>Go Live</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completion Checklist -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-tasks text-primary fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Step 4 Completion Checklist</h2>
+                <p class="text-muted">Complete these tasks to finalize your branding and marketing setup</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="checklist-card card">
+                        <div class="card-body">
+                            <div class="checklist-item" data-task="1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task1">
+                                    <label class="form-check-label" for="task1">
+                                        <strong>Complete Professional Profile</strong>
+                                        <small class="d-block text-muted">Upload headshot and complete bio information</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="scrollToProfile()">
+                                    Complete Profile
+                                </button>
+                            </div>
+
+                            <div class="checklist-item" data-task="2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task2">
+                                    <label class="form-check-label" for="task2">
+                                        <strong>Download Marketing Materials</strong>
+                                        <small class="d-block text-muted">Download at least 3 marketing templates</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="scrollToMarketing()">
+                                    Browse Materials
+                                </button>
+                            </div>
+
+                            <div class="checklist-item" data-task="3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task3">
+                                    <label class="form-check-label" for="task3">
+                                        <strong>Setup Professional Website</strong>
+                                        <small class="d-block text-muted">Choose template and configure domain</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="scrollToWebsite()">
+                                    Setup Website
+                                </button>
+                            </div>
+
+                            <div class="checklist-item" data-task="4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task4">
+                                    <label class="form-check-label" for="task4">
+                                        <strong>Review Brand Guidelines</strong>
+                                        <small class="d-block text-muted">Understand Flint brand standards and best practices</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showBrandGuidelines()">
+                                    Review Guidelines
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="step-navigation">
+            <div class="row">
+                <div class="col-6">
+                    <a href="step3.html" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Previous: Financial Setup
+                    </a>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-primary" onclick="nextStep()">
+                        Next: Operations & Compliance<i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Template Customization Modal -->
+    <div class="modal fade" id="templateModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="templateModalTitle">Customize Template</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="templateModalBody">
+                    <!-- Content loaded dynamically -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="orderTemplate()">
+                        Order Customized Template
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/step4.js"></script>
+</body>
+</html>

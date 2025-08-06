@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flint Directors Portal - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <div class="navbar-brand d-flex align-items-center">
+                <i class="fas fa-seedling text-primary fs-4 me-2"></i>
+                <span class="fw-bold">Flint Directors Portal</span>
+                <small class="text-muted ms-2">Your Onboarding Journey</small>
+            </div>
+
+            <div class="navbar-nav ms-auto d-flex flex-row align-items-center">
+                <div class="nav-item me-3">
+                    <span class="welcome-text">Welcome back, John</span>
+                    <div class="progress-indicator">
+                        <span class="progress-text">2 of 7 steps completed</span>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        <div class="user-avatar">JD</div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Welcome to Flint</h1>
+                            <p class="hero-subtitle">Build your business. Backed by Flint.</p>
+                            <p class="hero-description">
+                                You're not working for us. You're building your own business with us by your side. 
+                                Let's get you set up for success.
+                            </p>
+                            <div class="hero-actions">
+                                <button class="btn btn-primary btn-lg me-3" onclick="continueJourney()">
+                                    Continue Journey <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                                <button class="btn btn-outline-primary btn-lg" onclick="viewProgress()">
+                                    View Progress
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="hero-video">
+                            <div class="video-container">
+                                <div class="video-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Welcome Video" class="img-fluid rounded">
+                                    <div class="video-overlay">
+                                        <button class="play-btn" onclick="playWelcomeVideo()">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <div class="video-info">
+                                            <h5>Welcome from Christian</h5>
+                                            <p>Click to play introduction</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="progress-header">
+                            <h2>Your Progress</h2>
+                            <div class="overall-progress">
+                                <span class="progress-percentage">29% Complete</span>
+                                <div class="progress progress-main">
+                                    <div class="progress-bar" style="width: 29%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Step 1 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card completed" onclick="openStep(1)">
+                            <div class="step-header">
+                                <div class="step-number">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4>Welcome & Introduction</h4>
+                                    <p class="step-status">Completed</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Learn about Flint's mission and your role as a director</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card completed" onclick="openStep(2)">
+                            <div class="step-header">
+                                <div class="step-number">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4>Legal & Ownership Structure</h4>
+                                    <p class="step-status">Completed</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Set up your business structure and legal requirements</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card in-progress" onclick="openStep(3)">
+                            <div class="step-header">
+                                <div class="step-number">3</div>
+                                <div class="step-info">
+                                    <h4>Financial Setup & Revenue</h4>
+                                    <p class="step-status">In Progress</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Configure accounting systems and revenue tracking</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card locked">
+                            <div class="step-header">
+                                <div class="step-number">4</div>
+                                <div class="step-info">
+                                    <h4>Technology & Tools Training</h4>
+                                    <p class="step-status">Pending</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Master HubSpot, BrokerEngine, and other essential tools</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card locked">
+                            <div class="step-header">
+                                <div class="step-number">5</div>
+                                <div class="step-info">
+                                    <h4>Branding & Marketing Assets</h4>
+                                    <p class="step-status">Locked</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Create your brand identity and marketing materials</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card locked">
+                            <div class="step-header">
+                                <div class="step-number">6</div>
+                                <div class="step-info">
+                                    <h4>Operations & Compliance</h4>
+                                    <p class="step-status">Locked</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Implement operational processes and compliance measures</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card locked">
+                            <div class="step-header">
+                                <div class="step-number">7</div>
+                                <div class="step-info">
+                                    <h4>Launch Preparation</h4>
+                                    <p class="step-status">Locked</p>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <p>Final preparations and go-live activities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Recent Activity -->
+                    <div class="activity-section">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon completed">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h5>Completed Step 2</h5>
+                                    <p>Legal & Ownership Structure</p>
+                                    <small class="text-muted">2 hours ago</small>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon download">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h5>Downloaded documents</h5>
+                                    <p>Partnership Agreement, Tax Forms</p>
+                                    <small class="text-muted">1 day ago</small>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon video">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h5>Watched welcome video</h5>
+                                    <p>Introduction from Christian</p>
+                                    <small class="text-muted">2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Quick Links -->
+                    <div class="sidebar-section">
+                        <h4>Quick Links</h4>
+                        <div class="quick-links">
+                            <a href="#" class="quick-link">
+                                <i class="fab fa-slack"></i>
+                                <span>Slack Group</span>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <i class="fas fa-question-circle"></i>
+                                <span>FAQ</span>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <i class="fas fa-headset"></i>
+                                <span>Support Contact</span>
+                            </a>
+                            <a href="#" class="quick-link">
+                                <i class="fas fa-file-alt"></i>
+                                <span>My Documents</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Need Help -->
+                    <div class="sidebar-section">
+                        <div class="help-card">
+                            <h4>Need Help?</h4>
+                            <p>Our support team is here to help you succeed.</p>
+                            <button class="btn btn-success w-100">Contact Support</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="video-responsive">
+                        <iframe id="welcomeVideo" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

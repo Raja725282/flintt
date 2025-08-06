@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flint Directors Portal - Welcome</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Armand Grotesk fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/flint-logo.png" alt="Flint" height="40" class="d-inline-block align-text-top">
+                <span class="brand-text">Directors Portal</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="onboardingDropdown" role="button" data-bs-toggle="dropdown">
+                            Onboarding Steps
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="step1.html">Step 1: Welcome & Introduction</a></li>
+                            <li><a class="dropdown-item" href="step2.html">Step 2: Legal & Compliance</a></li>
+                            <li><a class="dropdown-item" href="step3.html">Step 3: Accounting & Financial</a></li>
+                            <li><a class="dropdown-item" href="step4.html">Step 4: Operational Training</a></li>
+                            <li><a class="dropdown-item" href="step5.html">Step 5: Branding & Marketing</a></li>
+                            <li><a class="dropdown-item" href="step6.html">Step 6: Partnership & Growth</a></li>
+                            <li><a class="dropdown-item" href="step7.html">Step 7: Continuous Support</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">Support</a>
+                    </li>
+                </ul>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="form-check form-switch ms-3">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Tracker - Fixed -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="container">
+            <div class="progress-wrapper">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Welcome to Flint Directors Portal</h1>
+                        <p class="hero-subtitle">Build your business. Own your future.</p>
+                        <p class="hero-description">Your comprehensive onboarding journey starts here. Follow our step-by-step process to become a successful Flint Director.</p>
+                        
+                        <div class="hero-actions">
+                            <a href="step1.html" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-rocket me-2"></i>Start Your Journey
+                            </a>
+                            <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                <i class="fas fa-play me-2"></i>Watch Intro Video
+                            </button>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="hero-stats mt-5">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number">500+</h3>
+                                        <p class="stat-label">Directors</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number">95%</h3>
+                                        <p class="stat-label">Success Rate</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="stat-number">7</h3>
+                                        <p class="stat-label">Steps</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="assets/images/hero-illustration.svg" alt="Flint Directors" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Onboarding Steps Section -->
+    <section class="onboarding-steps py-5" id="onboarding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Your Onboarding Journey</h2>
+                <p class="section-subtitle">Follow these 7 comprehensive steps to become a successful Flint Director</p>
+            </div>
+
+            <div class="row">
+                <!-- Step 1 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="step-title">Welcome & Introduction</h4>
+                        <p class="step-description">Learn about Flint's mission, values, and the Directors model. Get familiar with FlintEngine and FlintMedia.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step1.html" class="btn btn-outline-primary mt-3">
+                            Start Step 1 <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h4 class="step-title">Legal & Compliance</h4>
+                        <p class="step-description">Set up your legal structure, ABN, licensing, and understand compliance requirements.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step2.html" class="btn btn-outline-primary mt-3 disabled">
+                            Complete Step 1 First
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4 class="step-title">Accounting & Financial</h4>
+                        <p class="step-description">Set up accounting systems, understand revenue flows, and financial planning.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step3.html" class="btn btn-outline-primary mt-3 disabled">
+                            Complete Previous Steps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4 class="step-title">Operational Training</h4>
+                        <p class="step-description">Master the tech stack including HubSpot, AOL, BrokerEngine, and operational workflows.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step4.html" class="btn btn-outline-primary mt-3 disabled">
+                            Complete Previous Steps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4 class="step-title">Branding & Marketing</h4>
+                        <p class="step-description">Develop your personal brand, launch marketing campaigns, and access AI content tools.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step5.html" class="btn btn-outline-primary mt-3 disabled">
+                            Complete Previous Steps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="6">
+                        <div class="step-number">6</div>
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="step-title">Partnership & Growth</h4>
+                        <p class="step-description">Develop growth strategies, build partnerships, and plan for scaling your business.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step6.html" class="btn btn-outline-primary mt-3 disabled">
+                            Complete Previous Steps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="step-card" data-step="7">
+                        <div class="step-number">7</div>
+                        <div class="step-icon">
+                            <i class="fas fa-life-ring"></i>
+                        </div>
+                        <h4 class="step-title">Continuous Support</h4>
+                        <p class="step-description">Ongoing support, CPD training, performance reviews, and feedback loops.</p>
+                        <div class="step-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <a href="step7.html" class="btn btn-outline-primary mt-3 disabled">
+                            Complete Previous Steps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section py-5 bg-light" id="resources">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Quick Resources</h2>
+                <p class="section-subtitle">Download essential documents and access key tools</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h4>Latest PDFs</h4>
+                        <p>Access the most recent onboarding documents, checklists, and guides.</p>
+                        <button class="btn btn-primary">Download All</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Training Events</h4>
+                        <p>Book onboarding calls and view upcoming training sessions.</p>
+                        <button class="btn btn-primary">View Calendar</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community</h4>
+                        <p>Connect with other Flint Directors and access the community forum.</p>
+                        <button class="btn btn-primary">Join Community</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Directors Say</h2>
+                <p class="section-subtitle">Success stories from existing Flint Directors</p>
+            </div>
+
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The onboarding process was incredibly thorough and supportive. Within 6 months, I had built a thriving mortgage business."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="assets/images/testimonial1.jpg" alt="Sarah Johnson" class="author-image">
+                                <div class="author-info">
+                                    <h5>Sarah Johnson</h5>
+                                    <span>Flint Director, Sydney</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The support system at Flint is unmatched. The step-by-step guidance made the transition seamless."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="assets/images/testimonial2.jpg" alt="Michael Chen" class="author-image">
+                                <div class="author-info">
+                                    <h5>Michael Chen</h5>
+                                    <span>Flint Director, Melbourne</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Joining Flint was the best decision for my career. The training and ongoing support are exceptional."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="assets/images/testimonial3.jpg" alt="Emma Wilson" class="author-image">
+                                <div class="author-info">
+                                    <h5>Emma Wilson</h5>
+                                    <span>Flint Director, Brisbane</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section py-5 bg-light" id="support">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Need Help?</h2>
+                <p class="section-subtitle">We're here to support you every step of the way</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Live Chat</h4>
+                        <p>Get instant help from our support team</p>
+                        <button class="btn btn-primary" onclick="openChat()">Start Chat</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Phone Support</h4>
+                        <p>Speak directly with our onboarding specialists</p>
+                        <a href="tel:1300-123-456" class="btn btn-primary">Call Now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fab fa-slack"></i>
+                        </div>
+                        <h4>Slack Community</h4>
+                        <p>Join our director community on Slack</p>
+                        <button class="btn btn-primary">Join Slack</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Flint Directors Portal</h5>
+                    <p>Building successful mortgage broking businesses across Australia.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="step1.html">Get Started</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h6>Onboarding Steps</h6>
+                    <ul class="footer-links">
+                        <li><a href="step1.html">Welcome & Introduction</a></li>
+                        <li><a href="step2.html">Legal & Compliance</a></li>
+                        <li><a href="step3.html">Accounting & Financial</a></li>
+                        <li><a href="step4.html">Operational Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h6>Contact Info</h6>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone me-2"></i> 1300 123 456</li>
+                        <li><i class="fas fa-envelope me-2"></i> directors@flint.com.au</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Sydney, Australia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Flint Group. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link me-3">Terms of Service</a>
+                    <a href="#" class="footer-link">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome to Flint Directors</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Flint Directors Introduction" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs Floating Button -->
+    <div class="floating-faq">
+        <button class="btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#faqModal">
+            <i class="fas fa-question"></i>
+        </button>
+    </div>
+
+    <!-- FAQs Modal -->
+    <div class="modal fade" id="faqModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Frequently Asked Questions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long does the onboarding process take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The complete onboarding process typically takes 4-6 weeks, depending on your pace and availability. Each step is designed to be completed at your own speed.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What support is available during onboarding?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You'll have access to dedicated onboarding specialists, live chat support, phone support, and our Slack community. Plus, regular check-in calls are scheduled throughout the process.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can I complete steps out of order?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We recommend following the steps in order as each builds upon the previous one. However, some flexibility is possible depending on your specific situation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

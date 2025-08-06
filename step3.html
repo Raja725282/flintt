@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3: Financial Setup & Documentation - Flint Directors Onboarding</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="https://via.placeholder.com/150x50/4D0032/FFFFFF?text=FLINT" alt="Flint" height="40">
+            </a>
+            
+            <div class="navbar-nav ms-auto">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                        <div class="user-avatar me-2">U</div>
+                        <span class="user-name">User</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Step Header -->
+    <div class="step-header bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="step-number me-3">3</span>
+                        <div>
+                            <h1 class="h3 mb-1">Financial Setup & Documentation</h1>
+                            <p class="mb-0 opacity-75">Configure commission structure, banking, and essential documentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="step-completion-badge">
+                        <i class="fas fa-dollar-sign me-2"></i>
+                        <span class="completion-text">
+                            <span class="fw-bold text-primary">In Progress</span><br>
+                            <small class="step-completion-percentage">0%</small> complete
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="Step progress">
+            <ol class="breadcrumb step-breadcrumb">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="step1.html">Welcome</a></li>
+                <li class="breadcrumb-item"><a href="step2.html">Tools & Tech</a></li>
+                <li class="breadcrumb-item active">Financial Setup</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Commission Structure Section -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-percentage text-success fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Commission Structure Overview</h2>
+                <p class="text-muted">Understand your earning potential with Flint's competitive commission rates</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Commission Tiers -->
+                    <div class="commission-overview mb-4">
+                        <h4 class="mb-3">Commission Tiers & Benefits</h4>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="commission-tier-card tier-bronze">
+                                    <div class="tier-badge">
+                                        <i class="fas fa-medal text-warning"></i>
+                                        <span>Bronze</span>
+                                    </div>
+                                    <div class="tier-percentage">65%</div>
+                                    <div class="tier-requirement">$0 - $50K monthly</div>
+                                    <ul class="tier-benefits">
+                                        <li>Basic CRM access</li>
+                                        <li>Standard support</li>
+                                        <li>Monthly training</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="commission-tier-card tier-silver recommended">
+                                    <div class="recommended-badge">Most Popular</div>
+                                    <div class="tier-badge">
+                                        <i class="fas fa-medal text-secondary"></i>
+                                        <span>Silver</span>
+                                    </div>
+                                    <div class="tier-percentage">75%</div>
+                                    <div class="tier-requirement">$50K - $150K monthly</div>
+                                    <ul class="tier-benefits">
+                                        <li>Advanced CRM features</li>
+                                        <li>Priority support</li>
+                                        <li>Weekly training</li>
+                                        <li>Marketing materials</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="commission-tier-card tier-gold">
+                                    <div class="tier-badge">
+                                        <i class="fas fa-crown text-warning"></i>
+                                        <span>Gold</span>
+                                    </div>
+                                    <div class="tier-percentage">85%</div>
+                                    <div class="tier-requirement">$150K+ monthly</div>
+                                    <ul class="tier-benefits">
+                                        <li>Full platform access</li>
+                                        <li>Dedicated support</li>
+                                        <li>Daily training</li>
+                                        <li>Custom marketing</li>
+                                        <li>Lead generation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Schedule -->
+                    <div class="payment-schedule-card bg-light p-4 rounded">
+                        <h5><i class="fas fa-calendar-alt text-primary me-2"></i>Payment Schedule</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="payment-detail">
+                                    <strong>Frequency:</strong> Bi-weekly (every other Friday)
+                                </div>
+                                <div class="payment-detail">
+                                    <strong>Processing Time:</strong> 2-3 business days
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="payment-detail">
+                                    <strong>Minimum Payout:</strong> $500
+                                </div>
+                                <div class="payment-detail">
+                                    <strong>Payment Method:</strong> Direct deposit or check
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Commission Calculator -->
+                    <div class="commission-calculator card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-calculator me-2"></i>Commission Calculator</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Loan Amount ($)</label>
+                                <input type="number" class="form-control" id="loanAmount" placeholder="350000" min="0">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="interestRate" placeholder="6.5" min="0" max="15" step="0.1">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Commission Tier</label>
+                                <select class="form-select" id="commissionTier">
+                                    <option value="65">Bronze (65%)</option>
+                                    <option value="75" selected>Silver (75%)</option>
+                                    <option value="85">Gold (85%)</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="calculateCommission()">Calculate</button>
+                            
+                            <div id="calculationResult" class="mt-3" style="display: none;">
+                                <div class="result-card bg-success bg-opacity-10 p-3 rounded">
+                                    <div class="text-center">
+                                        <div class="result-amount text-success fw-bold fs-4">$0</div>
+                                        <div class="result-label text-muted">Estimated Commission</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banking Information Section -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-info bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-university text-info fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Banking & Payment Setup</h2>
+                <p class="text-muted">Configure secure payment processing and banking information</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Banking Form -->
+                    <div class="banking-form-card card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-lock me-2"></i>Secure Banking Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="bankingForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Bank Name *</label>
+                                        <input type="text" class="form-control" id="bankName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Account Type *</label>
+                                        <select class="form-select" id="accountType" required>
+                                            <option value="">Select Account Type</option>
+                                            <option value="checking">Checking</option>
+                                            <option value="savings">Savings</option>
+                                            <option value="business">Business</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Routing Number *</label>
+                                        <input type="text" class="form-control" id="routingNumber" maxlength="9" pattern="[0-9]{9}" required>
+                                        <div class="form-text">9-digit routing number</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Account Number *</label>
+                                        <input type="text" class="form-control" id="accountNumber" required>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Account Holder Name *</label>
+                                        <input type="text" class="form-control" id="accountHolderName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Backup Payment Method</label>
+                                        <select class="form-select" id="backupPayment">
+                                            <option value="">None</option>
+                                            <option value="check">Paper Check</option>
+                                            <option value="paypal">PayPal</option>
+                                            <option value="wire">Wire Transfer</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="bankingConsent" required>
+                                    <label class="form-check-label" for="bankingConsent">
+                                        I confirm that this banking information is accurate and authorize Flint to process payments to this account
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save me-2"></i>Save Banking Information
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Security Information -->
+                    <div class="security-info card bg-light">
+                        <div class="card-body">
+                            <h6><i class="fas fa-shield-alt text-success me-2"></i>Your Data is Secure</h6>
+                            <ul class="security-features">
+                                <li><i class="fas fa-check text-success me-2"></i>256-bit SSL encryption</li>
+                                <li><i class="fas fa-check text-success me-2"></i>PCI DSS compliant</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Bank-level security</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Never stored in plain text</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Payment Timeline -->
+                    <div class="payment-timeline card mt-3">
+                        <div class="card-header">
+                            <h6 class="mb-0">Payment Process</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-icon bg-primary">1</div>
+                                    <div class="timeline-content">
+                                        <small>Commission Earned</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon bg-primary">2</div>
+                                    <div class="timeline-content">
+                                        <small>Bi-weekly Processing</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon bg-success">3</div>
+                                    <div class="timeline-content">
+                                        <small>Direct Deposit</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Upload Section -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-warning bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-file-upload text-warning fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Required Documentation</h2>
+                <p class="text-muted">Upload essential documents for compliance and verification</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Required Documents -->
+                    <div class="document-upload-section">
+                        <h4 class="mb-3">Required Documents</h4>
+                        
+                        <div class="document-item mb-3">
+                            <div class="document-header d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Broker License</h6>
+                                    <small class="text-muted">Current state broker license</small>
+                                </div>
+                                <span class="badge bg-danger">Required</span>
+                            </div>
+                            <div class="upload-area" id="licenseUpload" onclick="triggerFileUpload('license')">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload or drag and drop</p>
+                                <small class="text-muted">PDF, JPG, PNG up to 10MB</small>
+                            </div>
+                            <input type="file" id="licenseFile" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                        </div>
+
+                        <div class="document-item mb-3">
+                            <div class="document-header d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Errors & Omissions Insurance</h6>
+                                    <small class="text-muted">Current E&O insurance certificate</small>
+                                </div>
+                                <span class="badge bg-danger">Required</span>
+                            </div>
+                            <div class="upload-area" id="insuranceUpload" onclick="triggerFileUpload('insurance')">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload or drag and drop</p>
+                                <small class="text-muted">PDF, JPG, PNG up to 10MB</small>
+                            </div>
+                            <input type="file" id="insuranceFile" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                        </div>
+
+                        <div class="document-item mb-3">
+                            <div class="document-header d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Business License</h6>
+                                    <small class="text-muted">Business registration/DBA if applicable</small>
+                                </div>
+                                <span class="badge bg-warning">Optional</span>
+                            </div>
+                            <div class="upload-area" id="businessUpload" onclick="triggerFileUpload('business')">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload or drag and drop</p>
+                                <small class="text-muted">PDF, JPG, PNG up to 10MB</small>
+                            </div>
+                            <input type="file" id="businessFile" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Upload Status -->
+                    <div class="upload-status-section">
+                        <h4 class="mb-3">Upload Status</h4>
+                        
+                        <div class="status-card" id="uploadStatusCard">
+                            <div class="status-item" id="licenseStatus">
+                                <div class="status-icon bg-secondary">
+                                    <i class="fas fa-file"></i>
+                                </div>
+                                <div class="status-content">
+                                    <h6>Broker License</h6>
+                                    <p class="status-text text-muted">Waiting for upload</p>
+                                </div>
+                                <div class="status-indicator">
+                                    <i class="fas fa-clock text-muted"></i>
+                                </div>
+                            </div>
+
+                            <div class="status-item" id="insuranceStatus">
+                                <div class="status-icon bg-secondary">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="status-content">
+                                    <h6>E&O Insurance</h6>
+                                    <p class="status-text text-muted">Waiting for upload</p>
+                                </div>
+                                <div class="status-indicator">
+                                    <i class="fas fa-clock text-muted"></i>
+                                </div>
+                            </div>
+
+                            <div class="status-item" id="businessStatus">
+                                <div class="status-icon bg-secondary">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="status-content">
+                                    <h6>Business License</h6>
+                                    <p class="status-text text-muted">Optional document</p>
+                                </div>
+                                <div class="status-indicator">
+                                    <i class="fas fa-minus text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Verification Timeline -->
+                        <div class="verification-timeline mt-4">
+                            <h6>Verification Process</h6>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-icon bg-primary">1</div>
+                                    <div class="timeline-content">
+                                        <strong>Upload Documents</strong>
+                                        <small>Submit required documentation</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon bg-secondary">2</div>
+                                    <div class="timeline-content">
+                                        <strong>Review Process</strong>
+                                        <small>1-2 business days verification</small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon bg-secondary">3</div>
+                                    <div class="timeline-content">
+                                        <strong>Approval</strong>
+                                        <small>Full platform access granted</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completion Checklist -->
+        <div class="content-section mb-5">
+            <div class="section-header text-center mb-4">
+                <div class="section-icon bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex">
+                    <i class="fas fa-tasks text-primary fa-2x"></i>
+                </div>
+                <h2 class="mt-3">Step 3 Completion Checklist</h2>
+                <p class="text-muted">Complete these tasks to finalize your financial setup</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="checklist-card card">
+                        <div class="card-body">
+                            <div class="checklist-item" data-task="1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task1">
+                                    <label class="form-check-label" for="task1">
+                                        <strong>Review Commission Structure</strong>
+                                        <small class="d-block text-muted">Understand your tier benefits and payment schedule</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="reviewCommissionStructure()">
+                                    Review Details
+                                </button>
+                            </div>
+
+                            <div class="checklist-item" data-task="2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task2">
+                                    <label class="form-check-label" for="task2">
+                                        <strong>Complete Banking Information</strong>
+                                        <small class="d-block text-muted">Set up secure payment processing</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="scrollToBanking()">
+                                    Complete Setup
+                                </button>
+                            </div>
+
+                            <div class="checklist-item" data-task="3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task3">
+                                    <label class="form-check-label" for="task3">
+                                        <strong>Upload Required Documents</strong>
+                                        <small class="d-block text-muted">Submit broker license and E&O insurance</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="scrollToDocuments()">
+                                    Upload Now
+                                </button>
+                            </div>
+
+                            <div class="checklist-item" data-task="4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="task4">
+                                    <label class="form-check-label" for="task4">
+                                        <strong>Test Commission Calculator</strong>
+                                        <small class="d-block text-muted">Calculate potential earnings for sample scenarios</small>
+                                    </label>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary" onclick="scrollToCalculator()">
+                                    Try Calculator
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="step-navigation">
+            <div class="row">
+                <div class="col-6">
+                    <a href="step2.html" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Previous: Tools & Tech
+                    </a>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-primary" onclick="nextStep()">
+                        Next: Branding & Marketing<i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Commission Details Modal -->
+    <div class="modal fade" id="commissionModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="commissionModalTitle">Commission Structure Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="commissionModalBody">
+                    <!-- Content loaded dynamically -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="downloadCommissionGuide()">
+                        Download Commission Guide
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/step3.js"></script>
+</body>
+</html>

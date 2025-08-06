@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flint Directors Portal - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Left Side - Login Form -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="login-container">
+                    <div class="text-center mb-5">
+                        <div class="flint-logo mb-4">
+                            <i class="fas fa-seedling text-primary fs-1"></i>
+                            <h2 class="flint-brand-text">Flint</h2>
+                        </div>
+                        <h3 class="welcome-title">Welcome Back</h3>
+                        <p class="subtitle">Sign in to your Directors Portal</p>
+                    </div>
+
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group mb-4">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control form-input" id="email" placeholder="john@flint.com" required>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="password-container">
+                                <input type="password" class="form-control form-input" id="password" placeholder="Enter your password" required>
+                                <button type="button" class="password-toggle" onclick="togglePassword()">
+                                    <i class="fas fa-eye" id="passwordIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label" for="remember">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-login w-100 mb-4">
+                            <span class="login-text">Sign In</span>
+                            <div class="login-spinner d-none">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+
+                        <div class="text-center">
+                            <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Side - Brand Section -->
+            <div class="col-lg-6 brand-section d-none d-lg-flex">
+                <div class="brand-content">
+                    <div class="brand-visual">
+                        <div class="dashboard-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="mockup-title">Directors Portal</div>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="stats-card">
+                                    <div class="stat-item">
+                                        <span class="stat-number">17.6K</span>
+                                        <span class="stat-label">Active Brokers</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">25.2</span>
+                                        <span class="stat-label">Growth Rate</span>
+                                    </div>
+                                </div>
+                                <div class="features-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Streamlined Onboarding</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Advanced Tools</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Expert Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="brand-text-section">
+                        <h2 class="brand-headline">Build Your Business. Backed by Flint.</h2>
+                        <p class="brand-description">
+                            Join the mortgage brokers that match your ambitions. Our comprehensive platform provides everything you need to succeed.
+                        </p>
+
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Advanced Technology</h4>
+                                    <p>Cutting-edge tools and integrations</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Expert Support</h4>
+                                    <p>Dedicated team to help you grow</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Proven Results</h4>
+                                    <p>Track record of success</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Flexible Growth</h4>
+                                    <p>Scale at your own pace</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <p class="testimonial-text">"The mortgage brokers that match your ambitions"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay d-none">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Signing you in...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
